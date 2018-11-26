@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" type="text/css" href="styles/nysl_3.css">
+    <link rel="shortcut icon" href="/nysl_favicon.ico" type="image/x-icon">
+    <meta charset="utf-8">
+    <title>Forms</title>
+
+    <script>
+        function lettersOnly(input) {
+                      //var regex = /[^a-z]/gi //
+                          var regex = /[^a-z\s]/gi 
+                      //  var regex = /^[a-z ,.'-]+$/i //
+                        input.value = input.value.replace(regex, "");
+                    }
+                </script>
+
+    <script>
+        function numbersOnly(input) {
+                        var regex = /[^0-9]/g
+                        input.value = input.value.replace(regex, "");
+                    }
+                </script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="heading">
+                <h1>Northside Youth Soccer League</h1>
+            </div>
+            <div class="banner"></div>
+            <div class="logo"><img src="nysl_logo.png" height="150" width="150" alt="nysl_logo"></div>
+            <div class="tab">
+                <h2>Forms</h2>
+            </div>
+
+            <div class="nav">
+                <ul class="navigation" style="list-style-type:none">
+                    <li class="nav"><a href="index.html">Home</a></li>
+                    <li class="nav"><a href="about.html">About NYSL</a></li>
+                    <li class="nav"><a href="schedule.html">Schedule</a></li>
+                    <li class="nav"><a href="rules.html">Rules</a></li>
+                    <li class="nav"><a href="forms.html" class="current">Forms</a></li>
+                    <li class="nav"><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="content">
+            <h2 class="rulesheading">Registration Form</h2>
+
+            <div class="form">
+
+                <!-- JS SCRIPTS -->
+
+
+
+                <!--   <script type="text/javascript">
+                    function validate(form_id, email)
+
+                    var reg = /^   $/;
+                    var address = document.forms[form_id].elements[email].value;
+
+                    /* var address = document.email_form.email.value */
+
+                    if (reg.test(address) == false) {
+                        alert('Invalid Email Address. Please enter a valid one.');
+                        document.forms[form_id].elements[email].value.focus();
+
+                        return false;
+                    }
+
+                </script> -->
+
+                <form id="form" action="/show_data.html" method="get" onsubmit="javascript:return validate('form','id of html formelement');">
+
+                    <fieldset>
+                        <legend>Full Name:</legend>
+
+                        <div class="formflex">
+                            <div>
+
+
+                                <label for="firstname">Player’s First Name: </label>
+
+                                <input type="text" id="firstname" name="firstname" placeholder="Your first name" required onkeyup="lettersOnly(this)">
+
+                            </div>
+
+                            <div>
+
+                                <label for="lastname">Last Name: </label>
+
+                                <input type="text" id="lastname" name="lastname" placeholder="Your last name" required onkeyup="lettersOnly(this)">
+
+                            </div>
+                        </div>
+
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Address:</legend>
+
+                        <div class="formflex">
+
+                            <div>
+
+                                <label for="street_address">Street Address: </label>
+                                <input type="text" id="street_address" name="street_address" placeholder="Street Address">
+
+                            </div>
+
+                            <div>
+
+                                <label for="city">City: </label>
+                                <input type="text" id="city" name="city" placeholder="Chicago" onkeyup="lettersOnly(this)">
+
+                            </div>
+
+                            <div>
+
+                                <label for="zipcode">Zip Code: </label>
+                                <input type="number" id="zipcode" name="zipcode" placeholder="60610 / 60614" onkeyup="numbersOnly(this)">
+
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Personal Info:</legend>
+
+                        <div class="formflex">
+
+
+
+                            <div> <label for="birthdate">Birth Date:
+                                    <input type="date" id="birthdate" name="birthdate"></label></div>
+
+                            <div> <label for="gender">Gender: </label>
+                                <select name="gender" id="gender">
+                                    <option value="" selected disabled hidden>Choose Gender</option>
+                                    <option value="male">Male</option>
+                                    <option value="female">Female</option>
+                                </select> </div>
+
+                            <div><label for="grade">Grade: </label>
+                                <select name="grade" id="grade">
+                                    <option value="" selected disabled hidden>Choose Grade</option>
+                                    <option value="1st">1st</option>
+                                    <option value="2nd">2nd</option>
+                                    <option value="3rd">2rd</option>
+                                    <option value="4th">4th</option>
+                                    <option value="5th">5th</option>
+                                </select> </div>
+
+                            <div> <label for="parent_guardian">Parent/Guardian:
+                                    <input type="text" id="parent_guardian" name="parent_guardian" placeholder="Parent/Guardian:" onkeyup="lettersOnly(this)"></label> </div>
+
+                        </div>
+
+
+                    </fieldset>
+
+                    <fieldset>
+
+                        <legend>Contact Info:</legend>
+
+                        <div class="formflex">
+
+                            <div> <label for="tel">Contact Phone: </label>
+                                <input type="tel" id="tel" name="tel" required onkeyup="numbersOnly(this)"></div>
+
+                            <div> <label for="email">Contact Email: </label>
+                                <input type="email" id="email" name="email" placeholder="Email address" required></div>
+
+                        </div>
+
+                    </fieldset>
+
+                    <div class="form2">
+
+                        <span class="form_heading">Which elementary schools do you live near? </span>
+
+                        <div class="school">
+                            <div class="firstschool"><span class="form_heading">First Closest School:</span><br>
+                                <input type="checkbox" name="first_school" value="aj_katzenmaier">AJ Katzenmaier<br>
+                                <input type="checkbox" name="first_school" value="greenbay">Greenbay<br>
+                                <input type="checkbox" name="first_school" value="Howard_a_yeager">Howard A Yeager<br>
+                                <input type="checkbox" name="first_school" value="marjorie_p_hart">Marjorie P Hart<br>
+                                <input type="checkbox" name="first_school" value="north_elementary">North Elementary<br>
+                                <input type="checkbox" name="first_school" value="south_elementary">South Elementary<br>
+                            </div>
+
+                            <div class="secondschool"><span class="form_heading">Second Closest School:</span><br>
+                                <input type="checkbox" name="second_school" value="aj_katzenmaier">AJ Katzenmaier<br>
+                                <input type="checkbox" name="second_school" value="greenbay">Greenbay<br>
+                                <input type="checkbox" name="second_school" value="Howard_a_yeager">Howard A Yeager<br>
+                                <input type="checkbox" name="second_school" value="marjorie_p_hart">Marjorie P Hart<br>
+                                <input type="checkbox" name="second_school" value="north_elementary">North Elementary<br>
+                                <input type="checkbox" name="second_school" value="south_elementary">South Elementary<br>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="position">
+                        <div class="positionnormal">
+                            <span class="form_heading">What position(s) do you normally play?</span> (check all that apply)<br>
+                            <input type="checkbox" name="position_normal" value="goalkeeper">Goalkeeper<br>
+                            <input type="checkbox" name="position_normal" value="defense">Defense<br>
+                            <input type="checkbox" name="position_normal" value="midfield">Midfield<br>
+                            <input type="checkbox" name="position_normal" value="forward">Forward<br>
+                        </div>
+                        <div class="positionwant">
+                            <span class="form_heading">What position(s) do you want to play?</span> (check all that apply)<br>
+                            <input type="checkbox" name="position_want" value="goalkeeper">Goalkeeper<br>
+                            <input type="checkbox" name="position_want" value="defense">Defense<br>
+                            <input type="checkbox" name="position_want" value="midfield">Midfield<br>
+                            <input type="checkbox" name="position_want" value="forward">Forward<br>
+                        </div>
+                    </div>
+
+                    <fieldset>
+                        <legend>Uniform Size: </legend>
+
+                        <p><input type="checkbox" name="uniform" value="alreadyhasuniform">
+                            <span class="form_heading">Already have a uniform</span></p>
+
+                        <div class="uniformsize">
+
+                            <div class="jerseysize">
+
+                                <label for="jerseysize">Jersey Size: </label>
+                                <select name="jerseysize" id="jerseysize">
+                                    <option value="" selected disabled hidden>Jersey Size</option>
+                                    <option value="youth_small">Youth Small</option>
+                                    <option value="youth_medium">Youth Medium</option>
+                                    <option value="small">Small</option>
+                                    <option value="medium">Medium</option>
+                                    <option value="large">Large</option>
+                                    <option value="extra_large">Extra Large</option>
+                                </select>
+
+                            </div>
+                            <div class="shortsize">
+
+                                <label for="shortsize">Shorts Size: </label>
+                                <select name="shortssize" id="shortsize">
+                                    <option value="" selected disabled hidden>Shorts Size</option>
+                                    <option value="youth_small">Youth Small</option>
+                                    <option value="youth_medium">Youth Medium</option>
+                                    <option value="small">Small</option>
+                                    <option value="medium">Medium</option>
+                                    <option value="large">Large</option>
+                                    <option value="extra_large">Extra Large</option>
+                                </select>
+                            </div>
+
+                        </div>
+
+                    </fieldset>
+
+                    <div class="formfooter">
+                        <p class="form_underline">Permission to Play</p>
+
+                        <p> I, the parent or guardian of the minor registrant, agree that the registrant and I will abide by all the rules of the Northside Youth Soccer League (NYSL). In recognizing the possibility of physical injury associated with soccer and in consideration for the “League” accepting the registrant for its soccer programs and activities, I hereby release, discharge, and/or otherwise indemnify NYSL, theiremployees and associated pe rsonnel and volunteers, including the facilities used for practices and games, against any claim by or on behalf of the registrant as a result of the registrant’s participation in the program and/or being transported to or from NYSL sponsored activities, which transportation.</p>
+
+                        <p>By signing below, I hereby agree and authorize the above. In addition, by signing below, I also acknowledge that I have read the cancellation policy and agree to its terms.</p>
+
+                        <div class="signatureblock">
+
+                            <div class="signature">
+                                <label for="signature">Parent/Guardian Signature: <input type="text" name="signature" id="signature" required onkeyup="lettersOnly(this)"></label>
+                            </div>
+
+                            <div class="signaturedate">
+                                <label for="signdate">Date: <input type="date" name="signdate" id="signdate"></label>
+                            </div>
+
+                        </div>
+
+                        <div class="submitbutton">
+                            <input type="submit" value="Submit">
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <div class="footer">
+                <ul class="breadcrumb">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About NYSL</a></li>
+                    <li><a href="schedule.html">Schedule</a></li>
+                    <li><a href="rules.html">Rules</a></li>
+                    <li>Forms</li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+
+        </div>
+    </div>
+</body>
+
+</html>

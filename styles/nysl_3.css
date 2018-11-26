@@ -1,0 +1,675 @@
+.container {
+    width: 1800px;
+    margin: 0px 50px;
+
+
+}
+
+/* HEADER */
+
+.header {}
+
+.heading {
+    text-align: center;
+    width: 100%;
+    text-decoration: underline;
+    background-color: darkgreen;
+    border: 2px solid black;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+.banner {
+    background-image: url(/soccerfield5.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 300px;
+    width: 100%;
+    border: 2px solid black;
+
+}
+
+.tab {
+    text-align: center;
+    background-color: darkgreen;
+    color: black;
+    border: 2px solid black;
+    width: 100%;
+    top: 495px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+
+.logo {
+    position: absolute;
+    left: 80px;
+    top: 100px;
+    -webkit-animation: rotation 50s infinite linear;
+}
+
+@-webkit-keyframes rotation {
+    from {
+        -webkit-transform: rotate(0deg);
+    }
+
+    to {
+        -webkit-transform: rotate(359deg);
+    }
+}
+
+
+
+/* NAVIGATION */
+
+
+.navigation {
+    top: 10px;
+    left: 80px;
+    position: absolute;
+    box-shadow: 5px 5px lawngreen;
+    padding: 15px 0px 15px 0px;
+    border: 1px solid darkgreen;
+    list-style-type: none;
+    overflow: hidden;
+    background-color: black;
+    display: block;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border: 1px solid black;
+}
+
+.nav {
+    float: left;
+}
+
+.nav a {
+    color: white;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+}
+
+.nav a:hover {
+    background-color: darkgreen;
+}
+
+
+
+a:link,
+a:visited {
+    color: white;
+}
+
+a.current:link,
+a.current:visited {
+    color: white;
+    background-color: green;
+}
+
+/* CONTENT */
+
+.content {
+    width: 100%;
+    text-align: left;
+    word-wrap: break-word;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.aboutbox {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.aboutbox > div {
+    width: 600px;
+    height: 300px;
+    text-align: center;
+    padding: 30px;
+
+}
+
+.aboutbox h3 {
+    font-style: italic;
+    font-size: 30px;
+
+}
+
+.indexflex {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 25px;
+    border-radius: 10px;
+}
+
+.indlexflex > div {
+    width: 300px;
+    height: 600px;
+    text-align: center;
+}
+
+.indexdate {
+    font-style: italic;
+    text-decoration: underline;
+    font-size: 30px;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+a.email {
+    color: black;
+}
+
+.form_underline {
+    text-decoration: underline;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.form_heading {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#rulescontent {
+    margin-bottom: 100px;
+}
+
+
+#mapsdiv {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    flex-wrap: wrap;
+}
+
+#mapflex1,
+#mapflex2 {
+    text-decoration: underline;
+    font-size: 30px;
+    text-align: center;
+    display: flex;
+    padding: 10px;
+    justify-content: space-between;
+}
+
+.mapflex1 > div {
+    flex: 1;
+}
+
+.mapflex2 > div {
+    flex: 1;
+}
+
+#mapflex3 {
+    display: block;
+    margin-bottom: 30px;
+}
+
+/* FORMS */
+
+.form {
+    width: 100%;
+    display: flex;
+}
+
+.form2 {
+    padding: 20px;
+}
+
+.submitbutton {
+    margin-bottom: 25px;
+}
+
+.formflex {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.formflex > div {
+    flex: 1;
+}
+
+.school {
+    display: flex;
+}
+
+.secondschool,
+.firstschool {
+    flex: 1;
+}
+
+.positionnormal,
+.positionwant {
+
+    padding: 20px;
+}
+
+.uniformsize {
+    display: flex;
+
+
+}
+
+.shortsize,
+.jerseysize {
+    flex: 1;
+}
+
+.formfooter {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.signatureblock {
+    display: flex;
+}
+
+.signature {
+    flex: 3;
+}
+
+.signaturedate {
+    flex: 3;
+
+}
+
+
+/* FORM DATA */
+
+.thankyou {
+    font-size: 30px;
+    text-align: center;
+
+}
+
+.formdatadiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2px;
+    margin-bottom: 40px;
+    padding-bottom: 40px;
+}
+
+.formdatatable tr:nth-child(odd) {
+    background-color: #f2f2f2;
+}
+
+.formdatatable {
+    border: 2px solid black;
+    padding: 8px;
+
+
+}
+
+#formdatahead {
+    border-bottom: 3px solid darkgreen;
+    background-color: greenyellow;
+    align-self: center;
+    text-align: center;
+}
+
+#formdatadata {
+    border-bottom: 3px solid darkgreen;
+    background-color: greenyellow;
+    align-self: center;
+    text-align: center;
+}
+
+
+
+/* FORM BUTTONS */
+
+input[type=text],
+select {
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=number],
+select {
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=date],
+select {
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=tel],
+select {
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=email],
+select {
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 60px
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+form_div {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+/* LIST & TABLES (RULES) */
+
+.rules {
+    list-style-type: square;
+
+}
+
+h4 {
+    text-align: center;
+    font-weight: normal;
+
+}
+
+.rulesheading {
+    text-align: center;
+
+}
+
+/* TABLE (SHEDULE) */
+
+.table_schedule {
+    line-height: normal;
+    font-family: "Arial", Times, serif;
+    table-layout: auto;
+    width: 100%;
+    margin-bottom: 20px;
+    border: 1px solid darkgreen;
+    padding: 10px;
+    background-color: white;
+    color: black;
+
+
+
+}
+
+tr:nth-child(even) {
+    background-color: lightgreen;
+}
+
+
+
+.table_schedule tr:hover {
+    background-color: #ddd;
+}
+
+
+.td_dates {
+    text-align: center;
+}
+
+.th_schedule {
+    text-decoration: underline;
+    font-size: 25px;
+    text-align: left;
+    width: 20;
+    background-color: darkgreen;
+}
+
+.th_schedule_month {
+    text-decoration: underline;
+    font-size: 25px;
+    text-align: center;
+    width: 25%;
+    background-color: darkgreen
+}
+
+#schedule_link {
+    color: black;
+    background-color: gainsboro;
+}
+
+
+
+/* FOOTER */
+
+.footer {
+    position: fixed;
+    width: 1800px;
+    margin: 0, 50px;
+    background-color: white;
+    color: black;
+    text-align: center;
+    bottom: 5px
+}
+
+ul.breadcrumb {
+    padding: 10px 16px;
+    list-style: none;
+    background-color: darkgreen;
+    border: 2px solid black;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+ul.breadcrumb li {
+    display: inline;
+    font-size: 18px;
+}
+
+ul.breadcrumb li + li:before {
+    padding: 8px;
+    color: black;
+    content: "/\00a0";
+}
+
+ul.breadcrumb li a {
+    color: white;
+    text-decoration: none;
+}
+
+ul.breadcrumb li a:hover {
+    color: #01447e;
+    text-decoration: underline;
+}
+
+.breadcrumbdiv {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+
+}
+
+ul.breadcrumb2 {
+    list-style-type: none;
+    background-color: white;
+    text-align: center;
+    border: 1px solid darkgreen;
+    border-radius: 10px;
+
+}
+
+ul.breadcrumb2 li {
+    display: inline;
+    font-size: 14px;
+    text-align: center;
+
+}
+
+ul.breadcrumb2 li + li:before {
+    padding: 2px;
+    color: black;
+    content: "/\00a0";
+}
+
+ul.breadcrumb2 li a {
+    color: black;
+    text-decoration: none;
+}
+
+ul.breadcrumb2 li a:hover {
+    color: darkgreen;
+    text-decoration: underline;
+}
+
+
+/* CHAT BOX */
+
+/* Button used to open the chat form - fixed at the bottom of the page */
+.open-button {
+    background-color: darkg;
+    color: black;
+    padding: 20px 20px;
+    border: none;
+    cursor: pointer;
+    opacity: 0.8;
+    position: fixed;
+    width: 300px;
+    border: solid 2px darkgreen;
+
+}
+
+/* The popup chat - hidden by default */
+.chat-popup {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    right: 15px;
+    border: 3px solid #f1f1f1;
+    z-index: 9;
+
+
+}
+
+/* Add styles to the form container */
+.form-container {
+    max-width: 300px;
+    padding: 10px;
+    background-color: white;
+}
+
+/* Full-width textarea */
+.form-container textarea {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #f1f1f1;
+    resize: none;
+    min-height: 200px;
+}
+
+/* When the textarea gets focus, do something */
+.form-container textarea:focus {
+    background-color: #ddd;
+    outline: none;
+}
+
+/* Set a style for the submit/send button */
+.form-container .btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom: 10px;
+    opacity: 0.8;
+
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+    background-color: red;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover,
+.open-button:hover {
+    opacity: 1;
+}
+
+
+/* ANIMATION /*/
+
+
+
+
+.tab,
+.heading,
+.breadcrumb {
+
+    -webkit-animation-name: example;
+    /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 4s;
+    /* Safari 4.0 - 8.0 */
+    animation-name: example;
+    animation-duration: 10s;
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes example {
+    from {
+        background-color: darkgreen;
+    }
+
+    to {
+        background-color: green;
+    }
+}
+
+/* Standard syntax */
+@keyframes example {
+    from {
+        background-color: darkgreen;
+    }
+
+    to {
+        background-color: green;
+    }
+}

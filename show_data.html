@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" type="text/css" href="styles/nysl_3.css">
+    <link rel="shortcut icon" href="/nysl_favicon.ico" type="image/x-icon">
+    <meta charset="utf-8">
+    <title>Form Data</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="heading">
+                <h1>Northside Youth Soccer League</h1>
+            </div>
+            <div class="banner"></div>
+            <div class="logo"><img src="nysl_logo.png" height="150" width="150" alt="nysl_logo"></div>
+            <div class="tab">
+                <h2>Form Data</h2>
+            </div>
+
+            <div class="nav">
+                <ul class="navigation" style="list-style-type:none">
+                    <li class="nav"><a href="index.html">Home</a></li>
+                    <li class="nav"><a href="about.html">About NYSL</a></li>
+                    <li class="nav"><a href="schedule.html">Schedule</a></li>
+                    <li class="nav"><a href="rules.html">Rules</a></li>
+                    <li class="nav"><a href="forms.html">Forms</a></li>
+                    <li class="nav"><a href="show_data.html" class="current">Form Data</a></li>
+                    <li class="nav"><a href="contact.html">Contact</a></li>
+
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="content">
+
+            <p class="thankyou">Thank You for Registering!</p>
+            <p class="thankyou">The following information has been sent as your feedback:</p>
+
+            <div class="formdatadiv">
+
+                <table class="formdatatable">
+                    <tr>
+                        <th id="formdatahead">Form Field</th>
+                        <th id="formdatadata">Field Value</th>
+                    </tr>
+
+                    <script>
+                        var args = location.search.substr(1).split('&');
+                        for (var i = 0; i < args.length; ++i) {
+                            var parts = args[i].split('=');
+                            if (parts != null) {
+                                var field = parts[0];
+                                var value = parts[1];
+                                if (value == null) {
+                                    value = "null"
+                                } else {
+                                    value = '"' + unescape(value.replace(/\+/g, ' ')) + '"';
+                                }
+
+                                document.writeln('<tr><td align="center">' + field + '</td>');
+                                document.writeln('<td align="center">' + value + '</td></tr>');
+                            }
+                        }
+
+                    </script>
+
+                    <noscript>
+                        <tr>
+                            <td>
+                                <p>You need to turn on Javascript in your browser.</p>
+
+                                <p>In Microsoft Internet Explorer 4 or greater:</p>
+                                <ul>
+                                    <li>From the "Tools" menu (in IE 4, it's the "View" menu), select "Internet Options".</li>
+                                    <li>Click on the "Security" tab.</li>
+                                    <li>Click on the "Custom Level" button. (In IE 4, select "Custom"
+                                        and then click on "Settings...".)</li>
+                                    <li>Under "Active scripting" make sure "Enable" is selected.</li>
+                                </ul>
+
+                                <p>In Netscape version 4 or greater:</p>
+                                <ul>
+                                    <li>From the <b>Edit</b> menu, select <b>Preferences</b>.</li>
+                                    <li>In the <b>Category</b> list on the left, click on the word "Advanced".</li>
+                                    <li>In the panel on the right, make sure "Enable JavaScript" is checked.</li>
+                                    <li>Click the <b>OK</b> button.</li>
+                                </ul>
+
+                            </td>
+                        </tr>
+                    </noscript>
+
+                </table>
+            </div>
+
+        </div>
+
+        <div class="footer">
+            <ul class="breadcrumb">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About NYSL</a></li>
+                <li><a href="schedule.html">Schedule</a></li>
+                <li><a href="rules.html">Rules</a></li>
+                <li><a href="forms.html">Forms</a></li>
+                <li>Form Data</li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+
+    </div>
+</body>
+
+</html>

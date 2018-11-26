@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" type="text/css" href="styles/nysl_3.css">
+    <link rel="shortcut icon" href="/nysl_favicon.ico" type="image/x-icon">
+    <meta charset="utf-8">
+    <title>Blank</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="heading">
+                <h1>Northside Youth Soccer League</h1>
+            </div>
+            <div class="banner"></div>
+            <div class="logo"><img src="nysl_logo.png" height="150" width="150" alt="nysl_logo"></div>
+            <div class="tab">
+                <h2>Blank</h2>
+            </div>
+
+            <div class="nav">
+                <ul class="navigation" style="list-style-type:none">
+                    <li class="nav"><a href="index.html">Home</a></li>
+                    <li class="nav"><a href="about.html">About NYSL</a></li>
+                    <li class="nav"><a href="schedule.html">Schedule</a></li>
+                    <li class="nav"><a href="rules.html">Rules</a></li>
+                    <li class="nav"><a href="forms.html">Forms</a></li>
+                    <li class="nav"><a href="contact.html">Contact</a></li>
+                    <li class="nav"><a href="blank.html" class="current">Blank</a></li>
+                </ul>
+            </div>
+
+
+            
+            
+            
+            <input type="checkbox" id="checkBox" onclick="enableDisable(this.checked, 'uniformBox')">
+            
+            
+            <input type="text" class="uniformBox">            
+            
+
+            <script language="javascript">
+                function enableDisable(bEnable, uniformBoxClassName) {
+                    document.getElementByClassName(uniformBox).disabled = true;                  
+                    
+                }
+            </script>
+            
+            
+
+            <fieldset>
+                <legend>Uniform Size: </legend>
+
+                <p><input type="checkbox" name="uniform" value="alreadyhasuniform" id="checkBox" onclick="enableDisable(this.checked, 'uniformBox')">
+                    <span class="form_heading">Already have a uniform</span></p>
+                
+                  <input type="text" class="uniformBox">  
+
+                <div class="uniformsize">
+                    <div class="jerseysize">
+
+                        <label for="jerseysize">Jersey Size: </label>
+                        <select name="jerseysize" class="uniformBox">
+                            <option value="" selected disabled hidden>Jersey Size</option>
+                            <option value="youth_small">Youth Small</option>
+                            <option value="youth_medium">Youth Medium</option>
+                            <option value="small">Small</option>
+                            <option value="medium">Medium</option>
+                            <option value="large">Large</option>
+                            <option value="extra_large">Extra Large</option>
+                        </select>
+
+                    </div>
+                    <div class="shortsize">
+
+                        <label for="shortssize">Shorts Size: </label>
+                        <select name="shortssize" class="uniformBox">
+                            <option value="" selected disabled hidden>Shorts Size</option>
+                            <option value="youth_small">Youth Small</option>
+                            <option value="youth_medium">Youth Medium</option>
+                            <option value="small">Small</option>
+                            <option value="medium">Medium</option>
+                            <option value="large">Large</option>
+                            <option value="extra_large">Extra Large</option>
+                        </select>
+                    </div>
+                    
+                     <input type="text" id="uniformBox"> 
+
+                </div>
+
+            </fieldset>
+            
+            <input type="text" id="textBox">
+    <input type="checkbox" id="checkBox" onclick="enableDisable(this.checked, 'textBox')">
+    <script language="javascript">
+    function enableDisable(bEnable, textBoxID)
+    {
+         document.getElementById(textBoxID).disabled = !bEnable
+    }
+</script>
+
+
+
+
+            <div>
+                <div class="footer">
+                    <ul class="breadcrumb">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About NYSL</a></li>
+                        <li><a href="schedule.html">Schedule</a></li>
+                        <li><a href="rules.html">Rules</a></li>
+                        <li><a href="forms.html">Forms</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li>Blank</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+</body>
+
+</html>
