@@ -1,6 +1,6 @@
 .container {
-    width: 1800px;
-    margin: 0px 50px;
+    width: 1500px;
+    margin: auto;
 
 
 }
@@ -43,8 +43,8 @@
 
 .logo {
     position: absolute;
-    left: 80px;
-    top: 100px;
+    left: 220px;
+    top: 80px;
     -webkit-animation: rotation 50s infinite linear;
 }
 
@@ -64,8 +64,8 @@
 
 
 .navigation {
-    top: 10px;
-    left: 80px;
+    top: 360px;
+    left: 220px;
     position: absolute;
     box-shadow: 5px 5px lawngreen;
     padding: 15px 0px 15px 0px;
@@ -478,8 +478,8 @@ tr:nth-child(even) {
 
 .footer {
     position: fixed;
-    width: 1800px;
-    margin: 0, 50px;
+    width: 1500px;
+    margin: auto;
     background-color: white;
     color: black;
     text-align: center;
