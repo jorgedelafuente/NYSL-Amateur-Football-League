@@ -3,34 +3,49 @@
 
 <head>
     <link rel="stylesheet" type="text/css" href="styles/nysl_3.css">
-    <link rel="shortcut icon" href="/nysl_favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="images/nysl_favicon.ico" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
     <title>Rules</title>
 </head>
 
 <body>
     <div class="container">
+
+         <!-- TAB -->
+
+        <div class="tab">
+            <h1>Northside Youth Soccer League - Rules</h1>
+        </div>
+
+
+        <!-- HEADER -->
+
         <div class="header">
-            <div class="heading">
-                <h1>Northside Youth Soccer League</h1>
-            </div>
-            <div class="banner"></div>
-            <div class="logo"><img src="nysl_logo.png" height="150" width="150" alt="nysl_logo"></div>
-            <div class="tab">
-                <h2>Rules</h2>
+
+            <div class="backgroundimg"></div>
+
+            <div class="logo"><img src="images/nysl_logo.png" class="logo" alt="nysl_logo">
             </div>
 
-            <div class="nav">
-                <ul class="navigation" style="list-style-type:none">
-                    <li class="nav"><a href="index.html">Home</a></li>
-                    <li class="nav"><a href="about.html">About NYSL</a></li>
-                    <li class="nav"><a href="schedule.html">Schedule</a></li>
-                    <li class="nav"><a href="rules.html" class="current">Rules</a></li>
-                    <li class="nav"><a href="forms.html">Forms</a></li>
-                    <li class="nav"><a href="contact.html">Contact</a></li>
-                </ul>
-            </div>
         </div>
+
+        <!-- NAV -->
+
+        <div class="topnav" id="myTopnav">
+            <a href="index.html">Home</a>
+            <a href="about.html">About NYSL</a>
+            <a href="schedule.html">Schedule</a>
+            <a href="rules.html" class="active">Rules</a>
+            <a href="forms.html">Forms</a>
+            <a href="contact.html">Contact</a>
+
+            <a href="javascript:void(0);" class="icon" onclick="navFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+        
+        <!-- CONTENT -->
 
         <div class="content" id="rulescontent">
 
@@ -198,8 +213,10 @@
                 <li>Each team must determine whether or not referees are registered prior to the start of each game. Upon request, referees officiating at any game must willingly and without bias, show documentation regarding their certification level and registration standing with the USSF to coach, assistant coach, or team captain of teams participating in that game. Prior to the game a coach may decide to postpone the game if the referees do not produce the requested documentation. The game is to be replayed at a later date.</li>
                 <li>Referees not complying with this section will be referred to the Disciplinary Committee.</li>
             </ul>
-
         </div>
+
+
+        <!-- FOOTER -->
 
         <div class="footer">
             <ul class="breadcrumb">
@@ -211,8 +228,11 @@
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </div>
-
     </div>
+
+    <!-- SCRIPTS -->
+
+    <script src="main.js"></script>
 </body>
 
 </html>

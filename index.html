@@ -3,7 +3,9 @@
 
 <head>
     <link rel="stylesheet" type="text/css" href="styles/nysl_3.css">
-    <link rel="shortcut icon" href="/nysl_favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="images/nysl_favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
     <title>Home</title>
 </head>
@@ -11,27 +13,41 @@
 <body>
     <div class="container">
 
-        <div class="header">
-            <div class="heading">
-                <h1>Northside Youth Soccer League</h1>
-            </div>
-            <div class="banner"></div>
-            <div class="logo"><img src="nysl_logo.png" height="150" width="150" alt="nysl_logo"></div>
+        <!-- TAB -->       
+
             <div class="tab">
-                <h2>Upcoming Events</h2>
+                <h1>Northside Youth Soccer League - Upcoming Events</h1>
             </div>
 
-            <div class="nav">
-                <ul class="navigation" style="list-style-type:none">
-                    <li class="nav"><a href="index.html" class="current">Home</a></li>
-                    <li class="nav"><a href="about.html">About NYSL</a></li>
-                    <li class="nav"><a href="schedule.html">Schedule</a></li>
-                    <li class="nav"><a href="rules.html">Rules</a></li>
-                    <li class="nav"><a href="forms.html">Forms</a></li>
-                    <li class="nav"><a href="contact.html">Contact</a></li>
-                </ul>
+
+        <!-- HEADER -->
+
+        <div class="header">
+
+            <div class="backgroundimg"></div>
+
+
+            <div class="logo"><img src="images/nysl_logo.png" class="logo" alt="nysl_logo">
             </div>
+
         </div>
+
+        <!-- NAV -->
+
+        <div class="topnav" id="myTopnav">
+            <a href="index.html" class="active">Home</a>
+            <a href="about.html">About NYSL</a>
+            <a href="schedule.html">Schedule</a>
+            <a href="rules.html">Rules</a>
+            <a href="forms.html">Forms</a>
+            <a href="contact.html">Contact</a>
+
+            <a href="javascript:void(0);" class="icon" onclick="navFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+
+        <!-- CONTENT -->
 
         <div class="content">
             <div class="indexflex">
@@ -50,6 +66,8 @@
             </div>
         </div>
 
+        <!-- FOOTER -->
+
         <div class="footer">
             <ul class="breadcrumb">
                 <li>Home</li>
@@ -60,8 +78,22 @@
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </div>
-
     </div>
+
+    <!-- SCRIPTS -->
+    <script src="main.js">
+    </script>
+
+    <script>
+        function navFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+    </script>
 </body>
 
 </html>

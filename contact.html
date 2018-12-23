@@ -3,34 +3,49 @@
 
 <head>
     <link rel="stylesheet" type="text/css" href="styles/nysl_3.css">
-    <link rel="shortcut icon" href="/nysl_favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="images/nysl_favicon.ico" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
     <title>Contact</title>
 </head>
 
 <body>
     <div class="container">
+
+        <!-- TAB -->
+
+        <div class="tab">
+            <h1>Northside Youth Soccer League - Contact</h1>
+        </div>
+
+
+        <!-- HEADER -->
+
         <div class="header">
-            <div class="heading">
-                <h1>Northside Youth Soccer League</h1>
-            </div>
-            <div class="banner"></div>
-            <div class="logo"><img src="nysl_logo.png" height="150" width="150" alt="nysl_logo"></div>
-            <div class="tab">
-                <h2>Contact Us</h2>
+
+            <div class="backgroundimg"></div>
+
+            <div class="logo"><img src="images/nysl_logo.png" class="logo" alt="nysl_logo">
             </div>
 
-            <div class="nav">
-                <ul class="navigation" style="list-style-type:none">
-                    <li class="nav"><a href="index.html">Home</a></li>
-                    <li class="nav"><a href="about.html">About NYSL</a></li>
-                    <li class="nav"><a href="schedule.html">Schedule</a></li>
-                    <li class="nav"><a href="rules.html">Rules</a></li>
-                    <li class="nav"><a href="forms.html">Forms</a></li>
-                    <li class="nav"><a href="contact.html" class="current">Contact</a></li>
-                </ul>
-            </div>
         </div>
+
+        <!-- NAV -->
+
+        <div class="topnav" id="myTopnav">
+            <a href="index.html">Home</a>
+            <a href="about.html">About NYSL</a>
+            <a href="schedule.html">Schedule</a>
+            <a href="rules.html">Rules</a>
+            <a href="forms.html">Forms</a>
+            <a href="contact.html" class="active">Contact</a>
+
+            <a href="javascript:void(0);" class="icon" onclick="navFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+        
+        <!-- CONTENT -->
 
         <div class="content">
             <p>Please email us at <a class="email" href="mailto:nysl@chisoccer.org?subject=ContactLeague">nysl@chisoccer.org</a>.</p>
@@ -42,27 +57,19 @@
             <button class="open-button" onclick="openForm()">Chat</button>
 
             <div class="chat-popup" id="myForm">
-                <form action="/message.html" class="form-container"  method="get">
+                <form action="/message.html" class="form-container" method="get">
                     <h2>Chat</h2>
 
-                    <label for="message" ><b>Message</b></label>
+                    <label for="message"><b>Message</b></label>
                     <textarea placeholder="Type message.." name="msg" id="message" required></textarea>
 
                     <button type="submit" class="btn">Send</button>
                     <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
                 </form>
             </div>
-
-            <script>
-                function openForm() {
-                    document.getElementById("myForm").style.display = "block";
-                }
-
-                function closeForm() {
-                    document.getElementById("myForm").style.display = "none";
-                }
-            </script>
         </div>
+
+        <!-- FOOTER -->
 
         <div class="footer">
             <ul class="breadcrumb">
@@ -74,8 +81,11 @@
                 <li>Contact</li>
             </ul>
         </div>
-
     </div>
+
+    <!-- SCRIPTS -->
+
+    <script src="main.js"></script>
 </body>
 
 </html>

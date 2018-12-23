@@ -3,37 +3,50 @@
 
 <head>
     <link rel="stylesheet" type="text/css" href="styles/nysl_3.css">
-    <link rel="shortcut icon" href="/nysl_favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="images/nysl_favicon.ico" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
     <title>Form Data</title>
 </head>
 
-<body>
+<body> 
+        
     <div class="container">
+        
+      <!-- TAB -->
+
+        <div class="tab">
+            <h1>Northside Youth Soccer League - Form Data</h1>
+        </div>
+
+        <!-- HEADER -->
+
         <div class="header">
-            <div class="heading">
-                <h1>Northside Youth Soccer League</h1>
-            </div>
-            <div class="banner"></div>
-            <div class="logo"><img src="nysl_logo.png" height="150" width="150" alt="nysl_logo"></div>
-            <div class="tab">
-                <h2>Form Data</h2>
-            </div>
 
-            <div class="nav">
-                <ul class="navigation" style="list-style-type:none">
-                    <li class="nav"><a href="index.html">Home</a></li>
-                    <li class="nav"><a href="about.html">About NYSL</a></li>
-                    <li class="nav"><a href="schedule.html">Schedule</a></li>
-                    <li class="nav"><a href="rules.html">Rules</a></li>
-                    <li class="nav"><a href="forms.html">Forms</a></li>
-                    <li class="nav"><a href="show_data.html" class="current">Form Data</a></li>
-                    <li class="nav"><a href="contact.html">Contact</a></li>
+            <div class="backgroundimg"></div>
 
-                </ul>
+            <div class="logo"><img src="images/nysl_logo.png" class="logo" alt="nysl_logo">
             </div>
 
         </div>
+
+        <!-- NAV -->
+
+        <div class="topnav" id="myTopnav">
+            <a href="index.html">Home</a>
+            <a href="about.html">About NYSL</a>
+            <a href="schedule.html">Schedule</a>
+            <a href="rules.html">Rules</a>
+            <a href="forms.html">Forms</a>
+            <a href="show_data.html" class="active">Form Data</a>
+            <a href="contact.html">Contact</a>
+
+            <a href="javascript:void(0);" class="icon" onclick="navFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+        
+         <!-- CONTENT -->
 
         <div class="content">
 
@@ -48,25 +61,7 @@
                         <th id="formdatadata">Field Value</th>
                     </tr>
 
-                    <script>
-                        var args = location.search.substr(1).split('&');
-                        for (var i = 0; i < args.length; ++i) {
-                            var parts = args[i].split('=');
-                            if (parts != null) {
-                                var field = parts[0];
-                                var value = parts[1];
-                                if (value == null) {
-                                    value = "null"
-                                } else {
-                                    value = '"' + unescape(value.replace(/\+/g, ' ')) + '"';
-                                }
-
-                                document.writeln('<tr><td align="center">' + field + '</td>');
-                                document.writeln('<td align="center">' + value + '</td></tr>');
-                            }
-                        }
-
-                    </script>
+            
 
                     <noscript>
                         <tr>
@@ -98,6 +93,8 @@
             </div>
 
         </div>
+        
+            <!-- FOOTER -->
 
         <div class="footer">
             <ul class="breadcrumb">
@@ -112,6 +109,8 @@
         </div>
 
     </div>
+    <!-- SCRIPTS -->
+    <script src="main.js"></script>
 </body>
 
 </html>
