@@ -54,9 +54,7 @@ body {
 /* BACKGROUND IMAGE */
 
 .backgroundimg {
-    display: block;
-    background-image: url("/images/kidssoccer3.png");
-    background-repeat: no-repeat;
+    background-image: url("../kidssoccer3.png");    
     background-size: cover;
     min-height: 300px;
     flex: 1;
