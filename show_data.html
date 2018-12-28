@@ -9,11 +9,11 @@
     <title>Form Data</title>
 </head>
 
-<body> 
-        
+<body>
+
     <div class="container">
-        
-      <!-- TAB -->
+
+        <!-- TAB -->
 
         <div class="tab">
             <h1>Northside Youth Soccer League - Form Data</h1>
@@ -25,7 +25,7 @@
 
             <div class="backgroundimg"></div>
 
-            <div class="logo"><img src="../nysl_logo.png" class="logo" alt="nysl_logo">
+            <div class="logo"><img src="nysl_logo.png" class="logo" alt="nysl_logo">
             </div>
 
         </div>
@@ -45,8 +45,8 @@
                 <i class="fa fa-bars"></i>
             </a>
         </div>
-        
-         <!-- CONTENT -->
+
+        <!-- CONTENT -->
 
         <div class="content">
 
@@ -56,45 +56,41 @@
             <div class="formdatadiv">
 
                 <table class="formdatatable">
-                    <tr>
-                        <th id="formdatahead">Form Field</th>
-                        <th id="formdatadata">Field Value</th>
-                    </tr>
-
-            
-
-                    <noscript>
+                    <thead>
                         <tr>
-                            <td>
-                                <p>You need to turn on Javascript in your browser.</p>
-
-                                <p>In Microsoft Internet Explorer 4 or greater:</p>
-                                <ul>
-                                    <li>From the "Tools" menu (in IE 4, it's the "View" menu), select "Internet Options".</li>
-                                    <li>Click on the "Security" tab.</li>
-                                    <li>Click on the "Custom Level" button. (In IE 4, select "Custom"
-                                        and then click on "Settings...".)</li>
-                                    <li>Under "Active scripting" make sure "Enable" is selected.</li>
-                                </ul>
-
-                                <p>In Netscape version 4 or greater:</p>
-                                <ul>
-                                    <li>From the <b>Edit</b> menu, select <b>Preferences</b>.</li>
-                                    <li>In the <b>Category</b> list on the left, click on the word "Advanced".</li>
-                                    <li>In the panel on the right, make sure "Enable JavaScript" is checked.</li>
-                                    <li>Click the <b>OK</b> button.</li>
-                                </ul>
-
-                            </td>
+                            <th id="formdatahead">Form Field</th>
+                            <th id="formdatadata">Field Value</th>
                         </tr>
-                    </noscript>
+                    </thead>
+
+                    <tbody id="formResults">
+                    </tbody>
+                    
+                    <script language="javascript">
+                        var args = location.search.substr(1).split('&');
+                        for (var i = 0; i < args.length; ++i) {
+                            var parts = args[i].split('=');
+                            if (parts != null) {
+                                var field = parts[0];
+                                var value = parts[1];
+                                if (value == null) {
+                                    value = "null"
+                                } else {
+                                    value = '"' + unescape(value.replace(/\+/g, ' ')) + '"';
+                                }
+
+                                document.writeln('<tr><td align="center">' + field + '</td>');
+                                document.writeln('<td align="center">' + value + '</td></tr>');
+                            }
+                        }
+                    </script>
 
                 </table>
             </div>
 
         </div>
-        
-            <!-- FOOTER -->
+
+        <!-- FOOTER -->
 
         <div class="footer">
             <ul class="breadcrumb">

@@ -26,7 +26,7 @@
             <div class="backgroundimg"></div>
 
 
-            <div class="logo"><img src="../nysl_logo.png" class="logo" alt="nysl_logo">
+            <div class="logo"><img src="nysl_logo.png" class="logo" alt="nysl_logo">
             </div>
 
         </div>
@@ -45,7 +45,7 @@
                 <i class="fa fa-bars"></i>
             </a>
         </div>
-        
+
         <!-- CONTENT -->
 
         <div class="content">
@@ -53,56 +53,53 @@
 
             <div class="form">
 
-                <form id="form" action="/show_data.html" method="get" onsubmit="javascript:return validate('form','id of html formelement');">
+                <form name="form" id="form" action="/show_data.html" method="get" onsubmit="javascript:return validate('form','id of html formelement');">
+
+
+                    <fieldset>
+                        <legend>Season <span id="getYear"></span> :</legend>
+                        <!--  <input type="checkbox" name="year" checked ><br> -->
+                        <input type="checkbox" name="spring" value="spring" id="getSpring">Spring
+                        <input type="checkbox" name="fall" value="fall" id="getFall">Fall
+                    </fieldset>
+
 
                     <fieldset>
                         <legend>Full Name:</legend>
-
                         <div class="formflex">
                             <div>
 
-
                                 <label for="firstname">Player’s First Name: </label>
-
-                                <input type="text" id="firstname" name="firstname" placeholder="Your first name" required onkeyup="lettersOnly(this)">
+                                <input type="text" id="firstname" name="firstname" placeholder="Your first name" onkeyup="lettersOnly(this)">
 
                             </div>
 
                             <div>
 
                                 <label for="lastname">Last Name: </label>
-
-                                <input type="text" id="lastname" name="lastname" placeholder="Your last name" required onkeyup="lettersOnly(this)">
+                                <input type="text" id="lastname" name="lastname" placeholder="Your last name" onkeyup="lettersOnly(this)">
 
                             </div>
                         </div>
-
                     </fieldset>
 
                     <fieldset>
                         <legend>Address:</legend>
-
                         <div class="formflex">
 
                             <div>
-
                                 <label for="street_address">Street Address: </label>
                                 <input type="text" id="street_address" name="street_address" placeholder="Street Address">
-
                             </div>
 
                             <div>
-
                                 <label for="city">City: </label>
                                 <input type="text" id="city" name="city" placeholder="Chicago" onkeyup="lettersOnly(this)">
-
                             </div>
 
                             <div>
-
                                 <label for="zipcode">Zip Code: </label>
                                 <input type="number" id="zipcode" name="zipcode" placeholder="60610 / 60614" onkeyup="numbersOnly(this)">
-
                             </div>
                         </div>
                     </fieldset>
@@ -111,9 +108,11 @@
                         <legend>Personal Info:</legend>
 
                         <div class="formflex">
-
                             <div> <label for="birthdate">Birth Date:
-                                    <input type="date" id="birthdate" name="birthdate"></label></div>
+                                    <input type="date" id="birthdate" name="birthdate"></label>
+                                <span id="ageGroup"></span>
+                            </div>
+
 
                             <div> <label for="gender">Gender: </label>
                                 <select name="gender" id="gender">
@@ -132,25 +131,26 @@
                                     <option value="5th">5th</option>
                                 </select> </div>
 
-                            <div> <label for="parent_guardian">Parent/Guardian:
-                                    <input type="text" id="parent_guardian" name="parent_guardian" placeholder="Parent/Guardian:" onkeyup="lettersOnly(this)"></label> </div>
 
                         </div>
-
 
                     </fieldset>
 
                     <fieldset>
 
                         <legend>Contact Info:</legend>
-
                         <div class="formflex">
 
+                            <div>
+                                <label for="parent_guardian">Parent/Guardian:
+                                    <input type="text" id="parent_guardian" name="parent_guardian" placeholder="Parent/Guardian:" onkeyup="lettersOnly(this)"></label>
+                            </div>
+
                             <div> <label for="tel">Contact Phone: </label>
-                                <input type="tel" id="tel" name="tel" required onkeyup="numbersOnly(this)"></div>
+                                <input type="tel" id="tel" name="tel" onkeyup="numbersOnly(this)" placeholder="000-000-0000"></div>
 
                             <div> <label for="email">Contact Email: </label>
-                                <input type="email" id="email" name="email" placeholder="Email address" required></div>
+                                <input type="email" id="email" name="email" placeholder="Email address"></div>
 
                         </div>
 
@@ -178,8 +178,10 @@
                                 <input type="checkbox" name="second_school" value="north_elementary">North Elementary<br>
                                 <input type="checkbox" name="second_school" value="south_elementary">South Elementary<br>
                             </div>
+
                         </div>
                     </div>
+
                     <div class="position">
                         <div class="positionnormal">
                             <span class="form_heading">What position(s) do you normally play?</span> (check all that apply)<br>
@@ -200,7 +202,7 @@
                     <fieldset>
                         <legend>Uniform Size: </legend>
 
-                        <p><input type="checkbox" name="uniform" value="alreadyhasuniform">
+                        <p><input type="checkbox" name="uniform" value="alreadyhasuniform" id="uniformCheck" onclick="uniformFunction()">
                             <span class="form_heading">Already have a uniform</span></p>
 
                         <div class="uniformsize">
@@ -247,17 +249,18 @@
                         <div class="signatureblock">
 
                             <div class="signature">
-                                <label for="signature">Parent/Guardian Signature: <input type="text" name="signature" id="signature" required onkeyup="lettersOnly(this)"></label>
+                                <label for="signature">Parent/Guardian Signature: <input type="text" name="signature" id="signature" onkeyup="lettersOnly(this)"></label>
                             </div>
 
                             <div class="signaturedate">
                                 <label for="signdate">Date: <input type="date" name="signdate" id="signdate"></label>
+
                             </div>
 
                         </div>
 
                         <div class="submitbutton">
-                            <input type="submit" value="Submit">
+                            <input type="submit" value="Submit" onclick="phonenumber(document.form.tel);validatedate(document.form.birthdate);validatedate(document.form.signdate)">
                         </div>
                     </div>
                 </form>

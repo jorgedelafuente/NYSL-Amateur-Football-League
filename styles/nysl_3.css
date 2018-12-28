@@ -186,7 +186,6 @@ body {
 .indlexflex > div {
     width: 100%;
     flex: 1;
-
     text-align: center;
 }
 
@@ -259,6 +258,7 @@ a.email {
 
 .form2 {
     padding: 20px;
+    
 }
 
 .submitbutton {
@@ -588,6 +588,12 @@ ul.breadcrumb2 li a:hover {
 /* CHAT BOX */
 
 /* Button used to open the chat form - fixed at the bottom of the page */
+#myChatBox {
+    margin-top: 100px;
+
+    
+}
+
 .open-button {
     background-color: whitesmoke;
     color: black;
@@ -603,12 +609,14 @@ ul.breadcrumb2 li a:hover {
 
 /* The popup chat - hidden by default */
 .chat-popup {
-    display: none;
-    position: fixed;
+   display: none;
+   /*  position: fixed;
     bottom: 0;
-    right: 15px;
-    border: 3px solid #f1f1f1;
+    right: 15px; 
+    border: 3px solid #f1f1f1;*/
     z-index: 9;
+    position: relative;
+   
 
 
 }
@@ -756,4 +764,9 @@ re_body {
     .re_header-right {
         float: none;
     }
+}
+
+fieldset {
+    padding:5px;
+    margin-bottom: 10px;
 }
