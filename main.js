@@ -6,13 +6,19 @@
 
 //document.form.onsubmit = function(event) {return false;}
 
-document.form.onsubmit = function (event) {
-    return (event.target.firstname.value !== "") && (event.target.lastname.value !== "");
-};
-
+if (window.document.location.href.includes("form") == true) {
+    document.form.onsubmit = function (event) {
+        return (event.target.firstname.value !== "") &&
+            (event.target.lastname.value !== "") &&
+            (ageChecker == true) &&
+            (phonenumber(document.form.tel) == true) &&
+            (event.target.email.value !== "") &&
+            (event.target.signature.value !== "") &&
+            (signedDateChecker == true);
+    };
+}
 //document.form.onsubmit = function(event) {
-//    return (event.target.firstname.value !== "") && (event.target.lastname.value !== "") && (event.target.birthdate.value !== "") && (event.target.signdate.value !== "") && (event.target.tel.value !== "");
-//  };
+//    return (event.target.firstname.value !== "");};
 
 // NAV
 function navFunction() {
@@ -45,59 +51,10 @@ function numbersOnly(input) {
 function phonenumber(inputtxt) {
     var phoneno = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
     if (inputtxt.value.match(phoneno)) {
+        console.log("Phone number is valid.");
         return true;
     } else {
-        console.log("Not a valid Phone Number");
-        return false;
-    }
-}
-
-// FORM DATE VALIDATOR
-
-function validatedate(inputText) {
-    var dateformat = /^(0?[1-9]|1[012])[\/\-](0?[1-9]|[12][0-9]|3[01])[\/\-]\d{4}$/;
-    // Match the date format through regular expression
-    if (inputText.value.match(dateformat)) {
-        document.form1.text1.focus();
-        //Test which seperator is used '/' or '-'
-        var opera1 = inputText.value.split('/');
-        var opera2 = inputText.value.split('-');
-        lopera1 = opera1.length;
-        lopera2 = opera2.length;
-        // Extract the string into month, date and year
-        if (lopera1 > 1) {
-            var pdate = inputText.value.split('/');
-        } else if (lopera2 > 1) {
-            var pdate = inputText.value.split('-');
-        }
-        var mm = parseInt(pdate[0]);
-        var dd = parseInt(pdate[1]);
-        var yy = parseInt(pdate[2]);
-        // Create list of days of a month [assume there is no leap year by default]
-        var ListofDays = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
-        if (mm == 1 || mm > 2) {
-            if (dd > ListofDays[mm - 1]) {
-                alert('Invalid date format!');
-                return false;
-            }
-        }
-        if (mm == 2) {
-            var lyear = false;
-            if ((!(yy % 4) && yy % 100) || !(yy % 400)) {
-                lyear = true;
-            }
-            if ((lyear == false) && (dd >= 29)) {
-                alert('Invalid date format!');
-                return false;
-            }
-            if ((lyear == true) && (dd > 29)) {
-                alert('Invalid date format!');
-                return false;
-            }
-        }
-    } else {
-        console.log("Invalid date format!");
-        document.form1.text1.focus();
+        console.log("Phone number is not valid. It needs to be 10 digits.");
         return false;
     }
 }
@@ -120,34 +77,43 @@ if (mm < 10) {
 today = yyyy + '-' + mm + '-' + dd;
 // today = mm + '/' + dd + '/' + yyyy;
 
-
 // BIRTH DATE
 
-document.getElementById("birthdate").addEventListener("change", function () {
+let ageChecker = document.getElementById("birthdate").addEventListener("change", function () {
     var input = this.value;
     var dateEntered = new Date(input);
     var bday = document.forms.form[11].value;
     var bdayyear = bday.substring(0, 4);
-    var age = ((yyyy - bdayyear) +1);
+    var age = ((yyyy - bdayyear) + 1);
     var agegroup = ("Age Group: Under" + age);
 
     if ((yyyy - bdayyear) <= 3) {
+        //alert("You are too young to play in the league!");
         console.log("You are too young to play in the league!");
+        return ageChecker = false;
     } else if ((yyyy - bdayyear) >= 13) {
+        //alert("You are too old to play in the league!");
         console.log("You are too old to play in the league!");
-        } else {
-            console.log(agegroup);
-        }
-    
+        return ageChecker = false;
+    } else {
+        console.log(agegroup);
+        return ageChecker = true;
+    }
 });
+
 
 // SIGN DATE
 
-document.getElementById("signdate").addEventListener("change", function () {
+let signedDateChecker = document.getElementById("signdate").addEventListener("change", function () {
     var input = this.value;
     var dateEntered = new Date(input);
     if (document.forms.form[43].value !== today) {
+        //alert("Signed Date needs to be current date!");
         console.log("Signed Date needs to be current date!");
+        return signedDateChecker = false;
+    } else {
+        console.log("Signed Date is valid.");
+        return signedDateChecker = true;
     }
 });
 
@@ -196,8 +162,6 @@ function closeForm() {
 }
 
 
-
-//
 //document.forms[0].help_text.addEventListener("click", EnableDisableToolTip);
 //
 //function EnableDisableToolTip() {
@@ -208,9 +172,6 @@ function closeForm() {
 //    alert("Unchecked");
 //    }        
 //}
-//
-//
-
 
 //// LOGIC FOR FORM DATA
 
@@ -245,3 +206,53 @@ function closeForm() {
 //
 //// document.writeln(intNum1 + intNum2)
 //// document.getElementById("formResults").innerHTML = answer!
+
+// FORM DATE VALIDATOR
+
+//function validatedate(inputText) {
+//    var dateformat = /^(0?[1-9]|1[012])[\/\-](0?[1-9]|[12][0-9]|3[01])[\/\-]\d{4}$/;
+//    // Match the date format through regular expression
+//    if (inputText.value.match(dateformat)) {
+//        document.form1.text1.focus();
+//        //Test which seperator is used '/' or '-'
+//        var opera1 = inputText.value.split('/');
+//        var opera2 = inputText.value.split('-');
+//        lopera1 = opera1.length;
+//        lopera2 = opera2.length;
+//        // Extract the string into month, date and year
+//        if (lopera1 > 1) {
+//            var pdate = inputText.value.split('/');
+//        } else if (lopera2 > 1) {
+//            var pdate = inputText.value.split('-');
+//        }
+//        var mm = parseInt(pdate[0]);
+//        var dd = parseInt(pdate[1]);
+//        var yy = parseInt(pdate[2]);
+//        // Create list of days of a month [assume there is no leap year by default]
+//        var ListofDays = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+//        if (mm == 1 || mm > 2) {
+//            if (dd > ListofDays[mm - 1]) {
+//                alert('Invalid date format!');
+//                return false;
+//            }
+//        }
+//        if (mm == 2) {
+//            var lyear = false;
+//            if ((!(yy % 4) && yy % 100) || !(yy % 400)) {
+//                lyear = true;
+//            }
+//            if ((lyear == false) && (dd >= 29)) {
+//                alert('Invalid date format!');
+//                return false;
+//            }
+//            if ((lyear == true) && (dd > 29)) {
+//                alert('Invalid date format!');
+//                return false;
+//            }
+//        }
+//    } else {
+//        console.log("Invalid date format!");
+//        document.form1.text1.focus();
+//        return false;
+//    }
+//}

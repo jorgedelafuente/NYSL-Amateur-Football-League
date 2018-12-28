@@ -70,14 +70,14 @@
                             <div>
 
                                 <label for="firstname">Player’s First Name: </label>
-                                <input type="text" id="firstname" name="firstname" placeholder="Your first name" onkeyup="lettersOnly(this)">
+                                <input type="text" id="firstname" name="firstname" placeholder="Your first name" onkeyup="lettersOnly(this)" required>
 
                             </div>
 
                             <div>
 
                                 <label for="lastname">Last Name: </label>
-                                <input type="text" id="lastname" name="lastname" placeholder="Your last name" onkeyup="lettersOnly(this)">
+                                <input type="text" id="lastname" name="lastname" placeholder="Your last name" onkeyup="lettersOnly(this)" required>
 
                             </div>
                         </div>
@@ -105,14 +105,13 @@
                     </fieldset>
 
                     <fieldset>
-                        <legend>Personal Info:</legend>
+                        <legend>Player Info:</legend>
 
                         <div class="formflex">
                             <div> <label for="birthdate">Birth Date:
-                                    <input type="date" id="birthdate" name="birthdate"></label>
+                                    <input type="date" id="birthdate" name="birthdate" required></label>
                                 <span id="ageGroup"></span>
                             </div>
-
 
                             <div> <label for="gender">Gender: </label>
                                 <select name="gender" id="gender">
@@ -147,10 +146,10 @@
                             </div>
 
                             <div> <label for="tel">Contact Phone: </label>
-                                <input type="tel" id="tel" name="tel" onkeyup="numbersOnly(this)" placeholder="000-000-0000"></div>
+                                <input type="tel" id="tel" name="tel" onkeyup="numbersOnly(this)" placeholder="000-000-0000" required></div>
 
                             <div> <label for="email">Contact Email: </label>
-                                <input type="email" id="email" name="email" placeholder="Email address"></div>
+                                <input type="email" id="email" name="email" placeholder="Email address" required></div>
 
                         </div>
 
@@ -178,25 +177,26 @@
                                 <input type="checkbox" name="second_school" value="north_elementary">North Elementary<br>
                                 <input type="checkbox" name="second_school" value="south_elementary">South Elementary<br>
                             </div>
+                        </div>
 
-                        </div>
-                    </div>
+                        <div class="position">
+                            <div class="positionnormal">
+                                <span class="form_heading">What position(s) do you normally play?</span> (check all that apply)<br>
+                                <input type="checkbox" name="position_normal" value="goalkeeper">Goalkeeper<br>
+                                <input type="checkbox" name="position_normal" value="defense">Defense<br>
+                                <input type="checkbox" name="position_normal" value="midfield">Midfield<br>
+                                <input type="checkbox" name="position_normal" value="forward">Forward<br>
+                            </div>
 
-                    <div class="position">
-                        <div class="positionnormal">
-                            <span class="form_heading">What position(s) do you normally play?</span> (check all that apply)<br>
-                            <input type="checkbox" name="position_normal" value="goalkeeper">Goalkeeper<br>
-                            <input type="checkbox" name="position_normal" value="defense">Defense<br>
-                            <input type="checkbox" name="position_normal" value="midfield">Midfield<br>
-                            <input type="checkbox" name="position_normal" value="forward">Forward<br>
+                            <div class="positionwant">
+                                <span class="form_heading">What position(s) do you want to play?</span> (check all that apply)<br>
+                                <input type="checkbox" name="position_want" value="goalkeeper">Goalkeeper<br>
+                                <input type="checkbox" name="position_want" value="defense">Defense<br>
+                                <input type="checkbox" name="position_want" value="midfield">Midfield<br>
+                                <input type="checkbox" name="position_want" value="forward">Forward<br>
+                            </div>
                         </div>
-                        <div class="positionwant">
-                            <span class="form_heading">What position(s) do you want to play?</span> (check all that apply)<br>
-                            <input type="checkbox" name="position_want" value="goalkeeper">Goalkeeper<br>
-                            <input type="checkbox" name="position_want" value="defense">Defense<br>
-                            <input type="checkbox" name="position_want" value="midfield">Midfield<br>
-                            <input type="checkbox" name="position_want" value="forward">Forward<br>
-                        </div>
+                        
                     </div>
 
                     <fieldset>
@@ -249,18 +249,17 @@
                         <div class="signatureblock">
 
                             <div class="signature">
-                                <label for="signature">Parent/Guardian Signature: <input type="text" name="signature" id="signature" onkeyup="lettersOnly(this)"></label>
+                                <label for="signature">Parent/Guardian Signature: <input type="text" name="signature" id="signature" onkeyup="lettersOnly(this)" required></label>
                             </div>
 
                             <div class="signaturedate">
-                                <label for="signdate">Date: <input type="date" name="signdate" id="signdate"></label>
-
+                                <label for="signdate">Date: <input type="date" name="signdate" id="signdate" required></label>
                             </div>
 
                         </div>
 
                         <div class="submitbutton">
-                            <input type="submit" value="Submit" onclick="phonenumber(document.form.tel);validatedate(document.form.birthdate);validatedate(document.form.signdate)">
+                            <input type="submit" value="Submit" onclick="phonenumber(document.form.tel);">
                         </div>
                     </div>
                 </form>

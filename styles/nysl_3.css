@@ -212,6 +212,7 @@ a.email {
 .form_heading {
     font-size: 20px;
     font-weight: bold;
+    
 }
 
 #rulescontent {
@@ -278,17 +279,20 @@ a.email {
 
 .school {
     display: flex;
+    flex-direction: row;
 }
 
 .secondschool,
 .firstschool {
     flex: 1;
+    padding-bottom: 15px;
 }
 
 .positionnormal,
 .positionwant {
-
-    padding: 20px;
+    flex: 1;
+    padding-bottom: 15px;
+  
 }
 
 .uniformsize {
@@ -610,12 +614,12 @@ ul.breadcrumb2 li a:hover {
 /* The popup chat - hidden by default */
 .chat-popup {
    display: none;
-   /*  position: fixed;
-    bottom: 0;
-    right: 15px; 
-    border: 3px solid #f1f1f1;*/
+    position: fixed;
+    top: 300px;
+    right: 210px; 
+    border: 3px solid #f1f1f1;
     z-index: 9;
-    position: relative;
+
    
 
 
@@ -769,4 +773,8 @@ re_body {
 fieldset {
     padding:5px;
     margin-bottom: 10px;
+}
+.position {
+    display: flex;
+    flex-direction: row;
 }
