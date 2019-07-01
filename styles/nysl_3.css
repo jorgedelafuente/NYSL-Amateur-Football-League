@@ -25,19 +25,18 @@ body {
 
 .h1nysl {
     align-self: center;
-
 }
 
 .logo {
-    position: absolute margin-right: 20px;
+    position: absolute;
+    margin-left: 1250px;
+    /* margin-right: 20px; */
     align-self: center;
-    flex: 1;   
+    /* flex: 1; */
     max-height: 225px;
     max-width: 225px;
-    
 
-
-    -webkit-animation: rotation 50s infinite linear;
+    -webkit-animation: rotation 60s infinite linear;
 }
 
 @-webkit-keyframes rotation {
@@ -50,23 +49,23 @@ body {
     }
 }
 
-
 /* BACKGROUND IMAGE */
 
 .backgroundimg {
-    background-image: url("../kidssoccer3.png");    
+    background-image: url("../images/kidssoccer3.png");
     background-size: cover;
-    min-height: 300px;
+    min-height: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    /* max-width: 100%; */
     flex: 1;
 }
 
 .header {
     display: flex;
     background-color: forestgreen;
-  
     border: 2px solid black;
 }
-
 
 /* NAV RESPONSIVE */
 
@@ -78,8 +77,6 @@ body {
     align-self: flex-start;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
-    
-
 }
 
 .topnav a {
@@ -94,7 +91,6 @@ body {
     box-shadow: 2px 4px black;
     border-radius: 5px;
     display: flex;
-    
 }
 
 .topnav a:hover {
@@ -146,6 +142,46 @@ body {
 
 /* CONTENT */
 
+.contact {
+    font-size: 30px;
+    width: 100%;
+    text-align: center;
+}
+
+.flexImage {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+}
+
+/* .flexImage>div {
+    flex: 1;
+} */
+
+.contactImageDiv1 {
+    background-image: url("../images/design1_image1.jpg");
+    min-width: 725px;
+    min-height: 375px;
+    background-repeat: no-repeat;
+    border: 1px solid darkgreen;
+    /* background-size: cover; */
+}
+
+.contactImageDiv2 {
+    background-image: url("../images/design2_image1.jpg");
+    min-width: 725px;
+    min-height: 375px;
+    background-repeat: no-repeat;
+    border: 1px solid darkgreen;
+    background-size: cover;
+}
+
+.contactImage {
+    max-width: 700px;
+    min-height: auto
+}
+
 .content {
     width: 100%;
     text-align: left;
@@ -157,10 +193,10 @@ body {
 .aboutbox {
     display: flex;
     flex-direction: row;
-    align-items: flex-start;
+    /* align-items: flex-start; */
 }
 
-.aboutbox > div {
+.aboutbox>div {
     width: 600px;
     height: 300px;
     text-align: center;
@@ -183,7 +219,7 @@ body {
     border-radius: 10px;
 }
 
-.indlexflex > div {
+.indlexflex>div {
     width: 100%;
     flex: 1;
     text-align: center;
@@ -212,7 +248,7 @@ a.email {
 .form_heading {
     font-size: 20px;
     font-weight: bold;
-    
+
 }
 
 #rulescontent {
@@ -237,11 +273,11 @@ a.email {
     justify-content: space-between;
 }
 
-.mapflex1 > div {
+.mapflex1>div {
     flex: 1;
 }
 
-.mapflex2 > div {
+.mapflex2>div {
     flex: 1;
 }
 
@@ -259,7 +295,7 @@ a.email {
 
 .form2 {
     padding: 20px;
-    
+
 }
 
 .submitbutton {
@@ -273,7 +309,7 @@ a.email {
     align-items: flex-start;
 }
 
-.formflex > div {
+.formflex>div {
     flex: 1;
 }
 
@@ -292,7 +328,7 @@ a.email {
 .positionwant {
     flex: 1;
     padding-bottom: 15px;
-  
+
 }
 
 .uniformsize {
@@ -533,7 +569,7 @@ ul.breadcrumb li {
     font-size: 18px;
 }
 
-ul.breadcrumb li + li:before {
+ul.breadcrumb li+li:before {
     padding: 8px;
     color: black;
     content: "/\00a0";
@@ -572,7 +608,7 @@ ul.breadcrumb2 li {
 
 }
 
-ul.breadcrumb2 li + li:before {
+ul.breadcrumb2 li+li:before {
     padding: 2px;
     color: black;
     content: "/\00a0";
@@ -595,7 +631,7 @@ ul.breadcrumb2 li a:hover {
 #myChatBox {
     margin-top: 100px;
 
-    
+
 }
 
 .open-button {
@@ -613,14 +649,14 @@ ul.breadcrumb2 li a:hover {
 
 /* The popup chat - hidden by default */
 .chat-popup {
-   display: none;
+    display: none;
     position: fixed;
     top: 300px;
-    right: 210px; 
+    right: 210px;
     border: 3px solid #f1f1f1;
     z-index: 9;
 
-   
+
 
 
 }
@@ -771,9 +807,10 @@ re_body {
 }
 
 fieldset {
-    padding:5px;
+    padding: 5px;
     margin-bottom: 10px;
 }
+
 .position {
     display: flex;
     flex-direction: row;

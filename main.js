@@ -8,12 +8,12 @@
 
 if (window.document.location.href.includes("form") == true) {
     document.form.onsubmit = function (event) {
-        return (event.target.firstname.value !== "") &&
-            (event.target.lastname.value !== "") &&
-            (ageChecker == true) &&
-            (phonenumber(document.form.tel) == true) &&
-            (event.target.email.value !== "") &&
-            (event.target.signature.value !== "") &&
+        return (event.target.firstname.value !== "") ||
+            (event.target.lastname.value !== "") ||
+            (ageChecker == true) ||
+            (phonenumber(document.form.tel) == true) ||
+            (event.target.email.value !== "") ||
+            (event.target.signature.value !== "") ||
             (signedDateChecker == true);
     };
 }
